@@ -1,26 +1,26 @@
 import { component$ } from '@builder.io/qwik';
-import type { StoryblokComponentType } from "@storyblok/js";
+import type { StoryblokComponentType } from '@storyblok/js';
 
 // Components
-import grid from "~/components/storyblok/grid";
-import teaser from "~/components/storyblok/teaser";
-import feature from "~/components/storyblok/feature";
-import page from "~/components/storyblok/page";
+import grid from '~/components/storyblok/grid';
+import teaser from '~/components/storyblok/teaser';
+import feature from '~/components/storyblok/feature';
+import page from '~/components/storyblok/page';
+import text from '~/components/storyblok/text';
 
 interface Props {
-  blok: StoryblokComponentType<string>;
+    blok: StoryblokComponentType<string>;
 }
 
 const Components: any = {
-  'sb-grid': grid,
-  'sb-teaser': teaser,
-  'sb-feature': feature,
-  'sb-page': page
+    'sb-grid': grid,
+    'sb-teaser': teaser,
+    'sb-feature': feature,
+    'sb-page': page,
+    'sb-text': text,
 };
 
 export default component$<Props>((props) => {
-  const Component = Components[`sb-${props.blok.component}`];
-  return (
-    <Component blok={props.blok} />
-  );
+    const Component = Components[`sb-${props.blok.component}`];
+    return <Component blok={props.blok} />;
 });

@@ -1,7 +1,9 @@
-import { storyblokInit, apiPlugin } from "@storyblok/js";
+import { storyblokInit, apiPlugin, renderRichText } from '@storyblok/js';
 
 export const { storyblokApi } = storyblokInit({
-  accessToken: import.meta.env.PUBLIC_STORYBLOK_TOKEN,
-  use: [apiPlugin],
-  bridge: true,
+    accessToken: import.meta.env.PUBLIC_STORYBLOK_TOKEN,
+    use: [apiPlugin],
+    bridge: true,
 });
+
+export const renderRichTextSB = renderRichText;
