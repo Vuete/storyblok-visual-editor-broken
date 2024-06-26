@@ -20,6 +20,7 @@ To use this starter application, follow these steps:
 
 ```
 PUBLIC_STORYBLOK_TOKEN=W1vLyxT5rQ15jBpANjnv0gtt
+PUBLIC_PREVIEW_SITE="yes" //This is to manage the cache
 ```
 
 4. Run the project with `pnpm start`
